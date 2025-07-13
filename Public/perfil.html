@@ -1,0 +1,169 @@
+<html>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
+<link href="stylesheets/perfil.css" rel="stylesheet">
+<link href="stylesheets/style.css" rel="stylesheet">
+
+
+
+<header>
+    <div class="center">
+        <div class="logotipo">
+            <h1>Find&Grind</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="find.html">
+                Find
+            </a>
+            <a href="grind.html">
+                Grind
+            </a>
+            <a href="metas.html">
+                Awards
+            </a>
+            <a href="tracker.html">
+                Tracker
+            </a>
+            <a href="water.html">
+                Water
+              </a>
+            <a id="loginButton" class="btn-menu" href="login.html">Login</a>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="student-profile py-4">
+    <div class="containerperfil">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent text-center">
+                        <img class="profile_img" src="img/userprofile.jpeg" alt="Users Image">
+                        <h3 id="userFullName"></h3>
+                    </div>
+                    <table class="table table-bordered small-table">
+                        <tr>
+                            <th>Totals</th>
+                            <th>Total</th>
+                        </tr>
+                        <tr>
+                            <td>Total de Repetições</td>
+                            <td id="shoulderpressReps">0</td>
+                        </tr>
+                        <tr>
+                            <td>Total de Agua Consumida</td>
+                            <td id="legpressReps">0</td>
+                        </tr>
+                        <tr>
+                            <td>Kcals Queimadas</td>
+                            <td id="situpbenchReps">0</td>
+                        </tr>
+                        
+                    </table>
+                    <div class="awards-logout">
+                        <button id="logoutBtn">Logout</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0"></i>Personal Info</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th width="25%">Username</th>
+                                <td width="2%">-</td>
+                                <td id="username"></td>
+                            </tr>
+                            <tr>
+                                <th width="25%">Gender</th>
+                                <td width="2%">-</td>
+                                <td id="gender">M</td>
+                            </tr>
+                            <tr>
+                                <th width="25%">Weight</th>
+                                <td width="2%">-</td>
+                                <td id="weight">80kg</td>
+                            </tr>
+                            <tr>
+                                <th width="25%">Height</th>
+                                <td width="2%">-</td>
+                                <td id="height">183cm</td>
+                            </tr>
+                            <tr>
+                                <th width="25%">Age</th>
+                                <td width="2%">-</td>
+                                <td id="age">20</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div style="height: 26px"></div>
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0"></i>Adicionar Reps</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="exercise-containerperfil d-flex justify-content-between align-items-center">
+                            <p class="exercise-name">Repetições Feitas</p>
+                            <div>
+                                <button id="decrease1">-</button>
+                                <span id="count1">0</span>
+                                <button id="increase10">+</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <button id="submitBtn">Submit</button>
+                </div>
+
+                <div class="card shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                        <h3 class="mb-0"></i>Adicionar Kcals</h3>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="exercise-containerperfil d-flex justify-content-between align-items-center">
+                            <p class="exercise-name">Kcals Queimadas</p>
+                            <div>
+                                <button id="decrease1">-</button>
+                                <span id="count2">0</span>
+                                <button id="increase10">+</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <button id="submitBtn2">Submit</button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+ 
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="javascript/perfil.js"></script>
+<script src="javascript/navbar.js"></script>
+
+</html>

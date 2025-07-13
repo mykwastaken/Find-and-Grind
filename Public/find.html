@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Find</title>
+    <link href="stylesheets/find.css" rel="stylesheet">
+</head>
+
+<header>
+    <div class="center">
+        <div class="logotipo">
+            <h1>Find&Grind</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="find.html">
+                Find
+            </a>
+            <a href="grind.html">
+                Grind
+            </a>
+            <a href="metas.html">
+                Awards
+            </a>
+            <a href="tracker.html">
+                Tracker
+            </a>
+            <a href="water.html">
+                Water
+              </a>
+            <a id="loginButton" class="btn-menu" href="login.html">Login</a>
+        </div>
+    </div>
+
+</header>
+
+<body>
+
+    <section class="mainfind">
+        <div class="titulofind">
+            <h1>Find</h1>
+            <br>
+        </div>
+        <section class="fundoroll">
+            <div class="wrapper">
+                <button id="zoom1">Parque da Bela Vista</button>
+                <button id="zoom2">Marvila</button>
+                <button id="zoom3">Graça</button>
+                <button id="zoom4">Parque Eduardo VII</button>
+                <button id="zoom5">Parque do Corredor Verde</button>
+                <button id="zoom6">Parque do Largo da Luz</button>
+                <button>São Sebastião</button>
+                <button>Areeiro</button>
+
+
+            </div>
+        </section>
+
+        <section class="fundoroll1">
+            <div id="map"></div>
+        </section>
+    </section>
+
+   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrT76RdNr5WWbquJS2Y_GUDeNxtH5bkPQ&callback=initMap" async defer></script>
+    <script src="javascript/find.js"></script>
+    <script src="javascript/navbar.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  max-width: 100%;
+}
+
+.center {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+header {
+  background-color: #FF751A;
+  padding: 10px 0;
+}
+
+.logotipo {
+  color: black;
+}
+
+.logotipo h1 {
+  height: 30px;
+  width: 300px;
+  color: white;
+  text-shadow: 0.1em 0.1em 0.05em #333;
+}
+
+.menu {
+  width: 80%;
+  text-align: right;
+}
+
+.menu a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: 0.4s;
+}
+
+.menu a:hover {
+  color: black;
+  ;
+}
+
+.menu .btn-menu {
+  background-color: #BABABA;
+  display: inline-block;
+  padding: 7px 14px;
+  color: black;
+  border-radius: 6px;
+}
+
+.menu .btn-menu:hover {
+  background-color: #74340a;
+  color: white;
+}
+
+/* media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .center {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .menu {
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+
+  .menu.show {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .menu a {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu .btn-menu {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-image: url('../img/fundogrind.jpg');
+}
+
+/* Estilos para o cabeçalho */
+.titulofind {
+
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.titulofind h2 {
+  font-size: 40px;
+
+  text-align: center;
+  color: white; 
+  margin-top: 20px;
+  text-shadow: 0.1em 0.1em 0.05em #000000;
+  font-weight: 800;
+ 
+}
+/* Estilos para os subtítulos */
+.subcategorias {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.subcategorias span {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #FF751A;
+  color: white;
+  font-size: 24px; /* Tamanho do texto */
+  margin: 0 10px; /* Espaçamento externo */
+  /* Outros estilos conforme necessário */
+}
+
+/* Estilos para as grades de imagens */
+.containermetas {
+  display: none;
+  margin-top: 20px;
+}
+
+.containermetas.active {
+  display: block;
+}
+
+.grupo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.itemmetas {
+  width: 23%;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.itemmetas img {
+  width: 50%;
+  height: auto;
+}
+
+.itemmetas .textmetas {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 5px;
+}

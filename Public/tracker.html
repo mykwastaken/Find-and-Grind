@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./Font-Awesome/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <title>Grind</title>
+
+    <link href="stylesheets/tracker.css" rel="stylesheet">
+</head>
+
+<header>
+    <div class="center">
+        <div class="logotipo">
+            <h1>Find&Grind</h1>
+        </div>
+        <!--logotipo-->
+        <div class="menu">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="find.html">
+                Find
+            </a>
+            <a href="grind.html">
+                Grind
+            </a>
+            <a href="metas.html">
+                Awards
+            </a>
+            <a href="tracker.html">
+                Tracker
+            </a>
+            <a href="water.html">
+                Water
+              </a>
+            <a id="loginButton" class="btn-menu" href="login.html">Login</a>
+        </div>
+
+    </div>
+
+</header>
+
+<div class="titulofind">
+    <h1>Tracker</h1>
+    <br>
+</div>
+
+
+<div class="content">
+    <div class="image-calculator">
+        <div class="calculator">
+                <button onclick="selectImage(this,'img/1.png')">
+                    <img src="img/chestpress1.jpg" alt="1"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/arm1.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/cross1.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/pull.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/shoulder.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/step1.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/hori1.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/legpress1.jpg" alt="2"></button>
+                <button onclick="selectImage(this,'img/2.png')">
+                    <img src="img/over1.jpg" alt="2"></button>
+                <button class="next-button" onclick="saveAndShowNumbers()">Next</button>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="popup">
+    <p>Seu conteúdo de pop-up aqui!</p>
+</div>
+
+<div class="calculator" id="numberCalculator">
+    <div>
+        <input type="text" id="numberDisplay" readonly>
+        <input type="text" id="resultDisplay" readonly>
+    </div>
+    <div class="buttons">
+        <button onclick="addToDisplay(5)">5</button>
+        <button onclick="addToDisplay(10)">10</button>
+        <button onclick="addToDisplay(15)">15</button>
+        <button onclick="addToDisplay(20)">20</button>
+        <button onclick="addToDisplay(25)">25</button>
+        <button onclick="addToDisplay(30)">30</button>
+        <button onclick="addToDisplay(35)">35</button>
+        <button onclick="addToDisplay(40)">40</button>
+        <button onclick="addToDisplay(45)">45</button>
+        <button onclick="clearNumberDisplay()">Clear</button>
+        <button onclick="addToDisplay('+')">+</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="showImageCalculator()">Back to Images</button>
+        <button onclick="showImageCalculator()">Save</button>
+    </div>
+
+</div>
+</div>
+</div>
+
+<div class="tooltip-container">
+    <img src="img/agua.png" alt="Imagem" class="tooltip-trigger">
+    <div class="tooltip-content">
+        <p>Ja bebeu agua hoje ?</p>
+        <img src="img/agua.png" alt="Imagem Interna">
+    </div>
+</div>
+<script src="javascript/tracker.js"></script>
+<script src="javascript/navbar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+body {
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-image: url('../img/fundogrind.jpg');
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+}
+
+
+
+.student-profile .card {
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+
+.student-profile .card .card-header .profile_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 8px solid #ff751a;
+    border-radius: 50%;
+}
+
+
+.student-profile .card h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+.student-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+
+.student-profile .col-lg-4 {
+  margin-left: 76px; /* Ajusta a margem direita */
+}
+
+.student-profile .table th,
+.student-profile .table td {
+    font-size: 14px;
+    padding: 5px 10px;
+    color: #000;
+    text-align: center;
+}
+
+
+
+
+
+
+
+#containerperfil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #containerperfil p {
+    margin: 0;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 3px 6px;
+    cursor: pointer;
+    border-color: black;
+  }
+
+  #submitBtn {
+    background-color: #FF751A;
+    color: white;
+    border-color: white;
+    font-size: 16px;
+    margin-bottom: 1%;
+  }
+  #submitBtn2 {
+    background-color: #FF751A;
+    color: white;
+    border-color: white;
+    font-size: 16px;
+    margin-bottom: 1%;
+  }
+
+  #logoutBtn {
+    background-color:#FF751A;
+    color: white;
+    border-color: white;
+    font-size: 20px;
+  }
+
+  #count {
+    font-size: 18px;
+    margin: 0 10px;
+  }
+
+
+
+
+
+
+
+
+ 

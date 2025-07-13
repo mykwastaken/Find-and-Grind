@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find&Grind</title>
+  <link rel="stylesheet" href="stylesheets/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <script src="javascript/login.js"></script>
+
+  <style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .close {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  
+
+  <div id="popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div class="container">
+    <div class="wrapper">
+      <div class="title"><span>Login</span></div>
+      <form id="form-login">
+        <div class="row">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Username" name="username" id="username" required>
+        </div>
+        <div class="row">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" name="password" id="password" required>
+        </div>
+        <div class="pass"><a href="recuperarsenha.html">Forgot password?</a></div>
+        <div class="row button">
+          <input id="login-button" type="submit" value="Login" >
+        </div>
+        <div class="signup-link">Not a member? <a href="signup.html">Sign-Up now</a></div>
+        <div class="signup-link">Return to <a href="index.html">Home</a></div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    function openPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    function openPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
+
+    setTimeout(openPopup, 3000);
+
+
+  </script>
+</body>
+
+</html>

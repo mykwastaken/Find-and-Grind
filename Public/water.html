@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./Font-Awesome/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <title>Tracker</title>
+    <link href="stylesheets/tracker.css" rel="stylesheet">
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .tracker-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .water-tracker,
+        .progress-counter {
+            width: calc(50% - 10px);
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-self: flex-end;
+        }
+
+
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        
+        .tracker-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            max-width: 800px;
+            width: 100%;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .water-tracker,
+        .progress-counter {
+            width: calc(50% - 10px);
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: white;
+        }
+       
+        .water-tracker,
+        .progress-counter {
+            width: 60%;
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .numeric-keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .numeric-keypad button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .numeric-keypad input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+
+        .progress-bar {
+            height: 20px;
+            background-color: #ddd;
+            position: relative;
+            width: 50%;
+            border-radius: 5px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 0;
+            background-color: #4caf50;
+            border-radius: 5px;
+        }
+
+        .next-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 3px;
+        }
+
+        .return-button{
+            padding: 10px;
+            font-size: 16px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+
+
+        #dailyProgress {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+
+
+<header>
+    <div class="center">
+        <div class="logotipo">
+            <h1>Find&Grind</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="find.html">Find</a>
+            <a href="grind.html">Grind</a>
+            <a href="metas.html">Awards</a>
+            <a href="Tracker.html">Tracker</a>
+            <a href="water.html">
+                Water
+              </a>
+            <a id="loginButton" class="btn-menu" href="login.html">Login</a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="tracker-container">
+        <div class="water-tracker">
+            <h2>Passo 1: Definir Limite Diário</h2>
+            <input type="number" id="dailyLimitInput" placeholder="Insira seu limite diário">
+            <div class="numeric-keypad">
+                <button onclick="addToDisplay('1')">1</button>
+                <button onclick="addToDisplay('2')">2</button>
+                <button onclick="addToDisplay('3')">3</button>
+                <button onclick="addToDisplay('4')">4</button>
+                <button onclick="addToDisplay('5')">5</button>
+                <button onclick="addToDisplay('6')">6</button>
+                <button onclick="addToDisplay('7')">7</button>
+                <button onclick="addToDisplay('8')">8</button>
+                <button onclick="addToDisplay('9')">9</button>
+                <button onclick="addToDisplay('0')">0</button>
+                <button onclick="deleteLastCharacter('dailyLimitInput')">Apagar</button>
+            </div>
+            <button class="next-button" onclick="nextStep()">Next</button>
+        </div>
+        <div class="progress-counter" style="display: none;">
+            <h2>Passo 2: Inserir Quantidade Consumida</h2>
+            
+            <input type="number" id="amountConsumed">
+            <div class="numeric-keypad">
+                <button onclick="addToAmountConsumed(1)">1</button>
+                <button onclick="addToAmountConsumed(2)">2</button>
+                <button onclick="addToAmountConsumed(3)">3</button>
+                <button onclick="addToAmountConsumed(4)">4</button>
+                <button onclick="addToAmountConsumed(5)">5</button>
+                <button onclick="addToAmountConsumed(6)">6</button>
+                <button onclick="addToAmountConsumed(7)">7</button>
+                <button onclick="addToAmountConsumed(8)">8</button>
+                <button onclick="addToAmountConsumed(9)">9</button>
+                <button class="return-button" onclick="returnToStepOne()">Voltar ao Passo 1</button>
+                <button onclick="addToAmountConsumed(0)">0</button>
+                <button onclick="deleteLastCharacter('amountConsumed')">Apagar</button>
+            </div>
+            <button class="next-button" onclick="trackWater()">Registrar Consumo</button>
+
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+            </div>
+        </div>
+        <p id="dailyProgress">0% do Limite Diário</p>
+    </div>
+
+    <script>
+        let dailyLimitValue = 3000;
+        let amountConsumed = 0;
+
+        function addToDisplay(number) {
+            const dailyLimitInput = document.getElementById('dailyLimitInput');
+            dailyLimitInput.value += number;
+        }
+
+        function nextStep() {
+            const dailyLimitInput = document.getElementById('dailyLimitInput');
+            dailyLimitValue = parseInt(dailyLimitInput.value);
+            document.querySelector('.water-tracker').style.display = 'none';
+            document.querySelector('.progress-counter').style.display = 'block';
+        }
+
+        function addToAmountConsumed(number) {
+            const amountConsumedInput = document.getElementById('amountConsumed');
+            const currentValue = parseInt(amountConsumedInput.value);
+
+            if (!isNaN(currentValue)) {
+                amountConsumedInput.value = currentValue * 10 + number;
+            } else {
+                amountConsumedInput.value = number;
+            }
+        }
+
+        function trackWater() {
+            const amountConsumedInput = document.getElementById('amountConsumed');
+            amountConsumed = parseInt(amountConsumedInput.value);
+
+            const progressPercent = (amountConsumed / dailyLimitValue) * 100;
+            const progressBarFill = document.getElementById('progressBarFill');
+            progressBarFill.style.width = progressPercent + '%';
+
+            const dailyProgress = document.getElementById('dailyProgress');
+            dailyProgress.textContent = progressPercent.toFixed(0) + '% do Limite Diário';
+
+            console.log('Quantidade consumida:', amountConsumed, 'ml');
+            console.log('Porcentagem consumida:', progressPercent.toFixed(0) + '%');
+        }
+
+        function returnToStepOne() {
+            document.querySelector('.progress-counter').style.display = 'none';
+            document.querySelector('.water-tracker').style.display = 'block';
+        }
+
+
+        function deleteLastCharacter(inputId) {
+            const inputField = document.getElementById(inputId);
+            const currentValue = inputField.value;
+            inputField.value = currentValue.slice(0, -1);
+        }
+    </script>
+
+</body>
+
+</html>
